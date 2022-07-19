@@ -8,6 +8,20 @@
         <entry key="..\:/Android/TestApp/app/src/main/res/layout/activity_user.xml" value="0.17074275362318841" />
         <entry key="..\:/Android/TestApp/app/src/main/res/layout/list_item.xml" value="0.17074275362318841" />
         <entry key="..\:/Android/TestApp/app/src/main/res/layout/list_item.xmllist_item.xml" value="0.17074275362318841" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/drawable/ic_home.xml" value="0.13" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/activity_main.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/activity_recycler.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/fragment_home.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/fragment_login.xml" value="0.18697916666666667" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/fragment_search.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/fragment_settings.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/fragment_terms.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/fragment_welcome.xml" value="0.18697916666666667" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/list_item.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/layout/rec_item.xml" value="0.140234375" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/menu/drawer_bottom_nav_menu.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/menu/drawer_bottom_nav_menu2.xml" value="0.18802083333333333" />
+        <entry key="..\:/Android/Test_App/app/src/main/res/menu/option_menu.xml" value="0.18697916666666667" />
       </map>
     </option>
   </component>

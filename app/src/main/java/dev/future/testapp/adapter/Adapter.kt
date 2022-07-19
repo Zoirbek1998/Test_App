@@ -1,39 +1,56 @@
 package dev.future.apptests.adapter
 
-import android.app.Activity
+
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
 import android.widget.ImageView
 import android.widget.TextView
-
+import android.widget.Toast
+import androidx.recyclerview.widget.RecyclerView
 import dev.future.apptests.model.User
 import dev.future.testapp.R
+import dev.future.testapp.RecyclerActivity
 import org.w3c.dom.Text
 
-class Adapter(private val context: Activity,private val items : ArrayList<User>) : ArrayAdapter<User>(context,
-    R.layout.list_item)
-{
+class Adapter : RecyclerView.Adapter<Adapter.ViewHolder>() {
 
-    override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
-        return super.getView(position, convertView, parent)
+    private var title = arrayOf("Chapter One","Chapter One","Chapter One","Chapter One","Chapter One","Chapter One","Chapter One","Chapter One","Chapter One",)
+    private var detailes = arrayOf("Chapter One","Chapter One","Chapter One","Chapter One","Chapter One","Chapter One","Chapter One","Chapter One","Chapter One",)
+    private var images = intArrayOf(R.drawable.a,R.drawable.b,R.drawable.a,R.drawable.a,R.drawable.a,R.drawable.a,R.drawable.a,R.drawable.a,R.drawable.a,)
 
-        val inflater : LayoutInflater = LayoutInflater.from(context)
-        val view: View = inflater.inflate(R.layout.list_item,null)
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+        var itemImage: ImageView
+        var itemName: TextView
+        var itemSupTitle: TextView
 
-        val image : ImageView= view.findViewById(R.id.profileimg)
-        val name :TextView=  view.findViewById(R.id.personName)
-        val lastMessage :TextView=  view.findViewById(R.id.lastMessage)
-        val time :TextView=  view.findViewById(R.id.time)
+        init {
+            itemImage = itemView.findViewById(R.id.image)
+            itemName = itemView.findViewById(R.id.name)
+            itemSupTitle = itemView.findViewById(R.id.suptitle)
 
-        image.setImageResource(items[position].imageId)
-        name.text = items[position].name
-        lastMessage.text = items[position].lastMessage
-        time.text = items[position].lastMsgTime
-
-        return view
-
+            itemView.setOnClickListener {
+                val position : Int = adapterPosition
+                Toast.makeText(itemView.context, "${title[position]}", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter.ViewHolder {
+        val v = LayoutInflater.from(parent.context).inflate(R.layout.rec_item,parent,false)
+        return ViewHolder(v)
+    }
+
+    override fun onBindViewHolder(holder: Adapter.ViewHolder, position: Int) {
+        holder.itemName.text = title[position]
+        holder.itemSupTitle.text = detailes[position]
+        holder.itemImage.setImageResource(images[position])
+    }
+
+    override fun getItemCount(): Int {
+        return title.size
+    }
+
 
 }
