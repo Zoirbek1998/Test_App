@@ -11,7 +11,6 @@ import dev.future.testapp.databinding.ActivityRecyclerBinding
 class RecyclerActivity : AppCompatActivity() {
 
     lateinit var binding : ActivityRecyclerBinding
-    lateinit var layoutManager : RecyclerView.LayoutManager
     lateinit var adapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>
 
 
@@ -24,6 +23,6 @@ class RecyclerActivity : AppCompatActivity() {
 //        binding.recyclerView.layoutManager = layoutManager
 
         adapter = RecyclerAdapter()
-        binding.recyclerView.adapter = adapter
+        binding.recyclerView2.adapter = adapter
     }
 }

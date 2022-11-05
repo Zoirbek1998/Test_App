@@ -11,7 +11,8 @@ import dev.future.testapp.databinding.FragmentWelcomeBinding
 
 class WelcomeFragment : Fragment() {
     lateinit var binding: FragmentWelcomeBinding
-    private  val args  : WelcomeFragmentArgs by navArgs()
+//    private  val args  : WelcomeFragmentArgs by navArgs()
+    private val args  :WelcomeFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -25,11 +26,11 @@ class WelcomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.editTextUsername.text = args.username
+        binding.editTextUsername.text = args.name
         binding.editTextPassword.text = args.password
-        binding.buttonOk.setOnClickListener {
-            val action = WelcomeFragmentDirections.actionWelcomeFragmentToHomeFragment()
-            findNavController().navigate(action)
-        }
+//        binding.buttonOk.setOnClickListener {
+//            val action = WelcomeFragmentDirections.actionWelcomeFragmentToHomeFragment()
+//            findNavController().navigate(action)
+//        }
     }
 }

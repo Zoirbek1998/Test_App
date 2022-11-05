@@ -2,14 +2,23 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <item android:title="Terms &amp; Conditions"
-        app:showAsAction="never"
+    <item
         android:id="@+id/termsAndConditions"
+        android:title="Terms &amp; Conditions"
+        app:showAsAction="ifRoom"
+        android:icon="@drawable/ic_baseline_search_24"
         />
 
-    <item android:title="Settings"
-        app:showAsAction="never"
+    <item
+        android:id="@+id/settingsFragment"
         android:menuCategory="secondary"
-        android:id="@+id/settingsFragment"/>
+        android:title="Settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/fragment"
+        android:menuCategory="secondary"
+        android:title="fragmet"
+        app:showAsAction="never" />
 
 </menu>

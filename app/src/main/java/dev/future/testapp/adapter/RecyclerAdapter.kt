@@ -12,8 +12,7 @@ import org.w3c.dom.Text
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-    val name =
-        arrayOf("Azim", "Azim", "Azim", "Azim", "Azim", "Azim", "Azim", "Azim", "Azim")
+    val name = arrayOf("Azim", "Azim", "Azim", "Azim", "Azim", "Azim", "Azim", "Azim", "Azim")
     val suptitle = arrayOf(
         "qalesan",
         "qalesan",
@@ -28,8 +27,8 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
     )
     val image = arrayOf(
         R.drawable.a,
-        R.drawable.a,
-        R.drawable.a,
+        R.drawable.b,
+        R.drawable.c,
         R.drawable.a,
         R.drawable.a,
         R.drawable.a,

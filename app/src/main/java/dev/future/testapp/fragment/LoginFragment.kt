@@ -27,8 +27,15 @@ class LoginFragment : Fragment() {
             val username = binding.editTextUsername.text.toString()
             val password = binding.editTextPassword.text.toString()
 
-            val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(username,password)
-            findNavController().navigate(action)
+//            val action = LoginFragmentDirections.actionLoginFragmentToWelcomeFragment(username,password)
+//            findNavController().navigate(action)
+
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragment2ToWelcomeFragment2(username,password))
         }
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() = LoginFragment()
     }
 }

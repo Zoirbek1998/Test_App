@@ -19,6 +19,9 @@ class SearchFragment : Fragment() {
         binding = FragmentSearchBinding.inflate(layoutInflater)
         return binding.root
     }
-
+    companion object {
+        @JvmStatic
+        fun newInstance() = SearchFragment()
+    }
     
 }

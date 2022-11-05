@@ -31,18 +31,16 @@ class MainActivity : AppCompatActivity() {
             binding.drawerLayout
         )
 
+
+        setSupportActionBar(binding.toolbar)
+
         appBarConfiguration = AppBarConfiguration(
             setOf(R.id.homeFragment,R.id.searchFragment2)
         )
 
-        setSupportActionBar(binding.toolbar)
-
-
         setupActionBarWithNavController(navController,appBarConfiguration)
 
         setupActionBarWithNavController(navController,appBarConfiguration2)
-
-
 
         // bottomMenu uchun
         binding.bottomNav.setupWithNavController(navController)
@@ -67,16 +65,16 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return if (item.itemId == R.id.termsAndConditions){
-            val action = NavGraphDirections.actionGlobalTermsFragment()
-            navController.navigate(action)
-            true
-        }else{
-            item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
-        }
-
-    }
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        return if (item.itemId == R.id.termsAndConditions){
+//            val action = NavGraphDirections.actionGlobalTermsFragment()
+//            navController.navigate(action)
+//            true
+//        }else{
+//            item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
+//        }
+//
+//    }
 
 
 
